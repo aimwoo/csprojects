@@ -1,0 +1,18 @@
+div.detail-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 200px 450px auto 650px;
+    position: absolute;
+    border-radius: 12px;
+    background: white;
+    padding:30px;
+    border: 3px solid black;
+}
+
+div.detail-background {
+    background-image: url("https://www.bme.udel.edu/wp-content/uploads/2016/06/gray-background-yxpsty.jpg");
+
+    background-size: cover;
+    height: 800px;
+}

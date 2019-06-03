@@ -1,0 +1,17 @@
+div.sign-signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 200px 450px auto 650px;
+    position: absolute;
+    border-radius: 12px;
+    background: white;
+    padding:30px;
+}
+
+div.sign-background {
+    background-image: url("https://aws1.discourse-cdn.com/pocketgems/uploads/episodeinteractive/original/3X/2/4/242abf765928fd509a6a8af23d1858c51045117f.jpeg");
+
+    background-size: cover;
+    height: 800px;
+}

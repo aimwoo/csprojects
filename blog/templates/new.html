@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        
+        h4{
+            display: inline-block;
+            color:  rgb(108, 108, 136);
+            display: flex;
+            flex-direction: column;
+            margin-left: 60px;            
+            
+        }
+        .container1{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            margin-top: 100px;
+            margin-left: 200px;
+            padding: 10px;
+            border: 3px solid rgb(204, 200, 200);
+            width: 450px;
+            height: 550px;
+            margin-bottom: 50px;
+            border-radius: 20px;
+            text-align: left;
+            background-color: rgb(204, 200, 200);
+        }
+        body{
+            background-image: url("https://i.pinimg.com/originals/de/0f/4b/de0f4bf6e8075312a6eb20ad7044571a.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Gothic A1', sans-serif;
+        }
+        #block{
+            display: block;
+        }
+        #blog-title{
+            width:240px;
+
+        }
+        input{
+            border-radius: 4px;
+            border: 2px solid rgb(204, 200, 200);
+        }
+        textarea{
+            border-radius: 4px;
+            border: 2px solid rgb(204, 200, 200);
+            margin-left: 60px; 
+        }
+        .btn {
+            text-align: center;
+            position: relative;
+            left: 180px;
+        }
+      
+        </style>
+</head>
+<body>
+    <div class="container1">
+      <form method="POST" action="{% url 'create' %}">
+          {% csrf_token %}
+        <label for="blog-title"> <h4>제목:</h4> </label>
+        <input id="blog-title" type="text" name="title" required>
+        <br>
+        <label for="blog-startdate"> <h4>시작 날짜:</h4> </label>
+        <input id="blog-startdate" type="datetime-local" name="startdate" >
+        <br>
+        <label for="blog-returndate"> <h4>반납 날짜:</h4> </label>
+        <input id="blog-returndate" type="datetime-local" name="returndate" >
+        <br>
+        
+        <label for="blog-location" > <h4 class="location" >장소:</h4> </label>
+        <input id="blog-location" type="text" name="location" required>
+        <br>
+        <label for="blog-cartype"> <h4 class="cartype">차종:</h4> </label>
+        <input id="blog-cartype" type="text" name="cartype" required>
+        <br>
+        
+         <h4 id=block >세부내용:</h4><textarea rows="10" cols="40" name="body"></textarea>
+         <br>
+        <!-- <input type="submit" value="제출"> -->
+        <input type="submit" class="btn">
+    </form>
+</div>
+{% endblock %}

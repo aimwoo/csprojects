@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <div class="input-background">
+        <form method="POST">
+            <div class="input-items">
+                    <p class="input-font">Ride Your Dream</p>
+                <div class="input-container">
+                    <label class="start-label" for="start-checkin">체크인</label>
+                    <input type="datetime-local" id="start-checkin" name="start_checkin">
+                </div>
+                <br>
+                <div>
+                    <label class="start-label" for="start-checkout">체크아웃</label>
+                    <input type="datetime-local" id="start-checkout" name="start_checkout">
+                </div>
+                <br>
+                <div>
+                    <label class="start-label" for="start-spot">장소</label>
+                    <select name="start-spot" id="start-spot">
+                        <option value="서울">서울</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원도">강원도</option>
+                        <option value="충남">충남</option>
+                        <option value="충북">충북</option>
+                        <option value="경남">경남</option>
+                        <option value="경북">경북</option>
+                        <option value="전남">전남</option>
+                        <option value="전북">전북</option>
+                        <option value="제주">제주</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label class="start-label" for="start-type">차종류</label>
+                    <select name="start-type" id="start-type">
+                        <option value="소형">소형</option>
+                        <option value="준중형">준중형</option>
+                        <option value="중형">중형</option>
+                        <option value="대형">대형</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="검색!">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}

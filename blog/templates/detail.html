@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="detail-background">
+    <div class="detail-line">
+        <div class="container">
+            <h1>{{ blog.title }}</h1>
+            <h4>{{ blog.startdate }}</h4>
+            <h3>{{ blog.returndate }}</h3>
+            <h3>{{ blog.location }}</h3>
+            <h3>{{ blog.cartype }}</h3>
+
+            <p>{{ blog.body }}</p>
+
+            <br>
+            <p>{{ blog.pub_date }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
